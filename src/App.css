@@ -1,0 +1,151 @@
+/* Reset básico */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-danger: #dc2626;
+  --color-danger-hover: #b91c1c;
+  --color-text: #222;
+  --color-text-muted: #555;
+  --color-bg: #f4f4f4;
+  --color-white: #fff;
+  --color-border: #ccc;
+
+  --radius: 6px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Container geral - mobile first: ocupa a largura, com respiro nas bordas */
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  color: var(--color-text);
+}
+
+/* === TodoForm  === */
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.todo-input {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+.btn-add {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: none;
+  border-radius: var(--radius);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-add:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.form-error { 
+  color: var(--color-danger);
+  font-size: 0.875rem;
+}
+
+/* === TodoFilters === */
+.todo-filters {
+  margin-top: 18px;
+  margin-bottom: var(--spacing-lg);
+}
+
+.filters-title {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-muted);
+}
+
+.filters-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.btn-filter {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #2563eb;
+  border-radius: 6px;
+  background-color: white;
+  color: #2563eb;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn-filter:hover {
+  background-color: #eff6ff;
+}
+
+/* === TodoList / TodoItem === */
+.todo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--color-white);
+  border-radius: var(--radius);
+}
+
+.todo-text {
+  flex: 1;
+}
+
+.todo-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.btn-remove {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: var(--radius);
+  background-color: var(--color-danger);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.btn-remove:hover {
+  background-color: var(--color-danger-hover);
+}
